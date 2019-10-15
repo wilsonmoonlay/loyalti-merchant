@@ -22,7 +22,6 @@ class App extends React.Component {
   render() {
     const { alert } = this.props
     return (
-      /*<div className="jumbotron"> */
       <div className="container-fluids">
         {alert.message && (
           <div className={`alert ${alert.type}`}>{alert.message}</div>
@@ -36,7 +35,6 @@ class App extends React.Component {
           </Switch>
         </Router>
       </div>
-      /*</div>*/
     )
   }
 }
