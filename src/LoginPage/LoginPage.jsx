@@ -40,7 +40,7 @@ class LoginPage extends React.Component {
     const { loggingIn } = this.props
     const { username, password, submitted } = this.state
     return (
-      <div className="row align-items-center justify-content-center text-center login-row-wrapper">
+      <div className="row mx-0 align-items-center justify-content-center text-center login-row-wrapper">
         <div className="col-4 ">
           <div className="row logo-row-wrapper">
             <div className="col">
