@@ -23,7 +23,7 @@ class App extends React.Component {
     const { alert } = this.props
     return (
       /*<div className="jumbotron"> */
-      <div className="container container-fluid">
+      <div className="container-fluids">
         {alert.message && (
           <div className={`alert ${alert.type}`}>{alert.message}</div>
         )}

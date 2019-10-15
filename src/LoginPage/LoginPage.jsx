@@ -40,22 +40,31 @@ class LoginPage extends React.Component {
     const { loggingIn } = this.props
     const { username, password, submitted } = this.state
     return (
-      <div className="row justify-content-center">
-        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-6 col-xl-6">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <h3>Log In</h3>
-              <form name="form" onSubmit={this.handleSubmit}>
+      <div className="row align-items-center justify-content-center text-center login-row-wrapper">
+        <div className="col-4 ">
+          <div className="row logo-row-wrapper">
+            <div className="col">
+              <p>Logo</p>
+            </div>
+          </div>
+          <div className="row form-row-wrapper">
+            <div className="col px-5">
+              <h3 className="mt-4 login-title">Log In</h3>
+              <form
+                className="login-form"
+                name="form"
+                onSubmit={this.handleSubmit}
+              >
                 <div
                   className={
                     'form-group' + (submitted && !username ? ' has-error' : '')
                   }
                 >
-                  <label htmlFor="username">Username</label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="login-text"
                     name="username"
+                    placeholder="Email"
                     value={username}
                     onChange={this.handleChange}
                   />
@@ -68,11 +77,11 @@ class LoginPage extends React.Component {
                     'form-group' + (submitted && !password ? ' has-error' : '')
                   }
                 >
-                  <label htmlFor="password">Password</label>
                   <input
                     type="password"
-                    className="form-control"
+                    className="login-text"
                     name="password"
+                    placeholder="Password"
                     value={password}
                     onChange={this.handleChange}
                   />
@@ -80,13 +89,19 @@ class LoginPage extends React.Component {
                     <div className="help-block">Password is required</div>
                   )}
                 </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" /> Remember Me
-                  </label>
+                <div className="row">
+                  <div className="col-6 text-left remember-me">
+                    <label>
+                      <input type="checkbox" /> Remember Me
+                    </label>
+                  </div>
+                  <div className="col-6 text-right forgot-password">
+                    <Link to="/forgot-password">Forgot Password?</Link>
+                  </div>
                 </div>
-                <div className="form-group">
-                  <button className="btn btn-primary">Login</button>
+
+                <div className="mt-4 form-group">
+                  <button className="login-button">Login</button>
                   {loggingIn && (
                     <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                   )}
@@ -94,16 +109,18 @@ class LoginPage extends React.Component {
               </form>
             </div>
           </div>
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <Link to="/register" className="btn btn-success">
-                Create Account
+          <div className="row px-0 py-3 register-row-wrapper">
+            <div className="col px-0">
+              <Link to="/register">
+                <button className="register-button">Create Account</button>
               </Link>
             </div>
           </div>
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <p>footer</p>
+          <div className="row pt-3 footer-row-wrapper">
+            <div className="col">
+              <p className="copyright">
+                Copyright 2019 Loyalti<span className="light">express</span>
+              </p>
             </div>
           </div>
         </div>
