@@ -2,26 +2,28 @@ a {
   cursor: pointer;
 }
 
-/*
+/* 
 div {
   border: 0.5px solid black;
-}
+} 
 */
 
 .container,
 .container-fluids {
-  height: 100vh;
-  background-image: linear-gradient(to bottom right, #5f99ed, #9c7dc4);
-}
-
-.login-row-wrapper {
-  height: 100vh;
+  /*background-image: linear-gradient(to bottom right, #5f99ed, #9c7dc4);*/
+  background-image: url('./_assets/le-bg.jpg');
 }
 
 .form-row-wrapper {
   height: 372px;
   border-radius: 15px;
   background-color: #ffffff;
+}
+
+.logo {
+  width: 301px;
+  height: 63px;
+  object-fit: contain;
 }
 
 .login-title {

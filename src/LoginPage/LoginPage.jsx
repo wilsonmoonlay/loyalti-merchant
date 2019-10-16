@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 import { userActions } from '../_actions'
 
+import { logo } from '../_assets'
+
 class LoginPage extends React.Component {
   constructor(props) {
     super(props)
@@ -42,9 +44,9 @@ class LoginPage extends React.Component {
     return (
       <div className="row mx-0 align-items-center justify-content-center text-center login-row-wrapper">
         <div className="col-4 ">
-          <div className="row logo-row-wrapper">
+          <div className="row my-5 logo-row-wrapper">
             <div className="col">
-              <p>Logo</p>
+              <img className="logo" src={logo} />
             </div>
           </div>
           <div className="row form-row-wrapper">
