@@ -8,10 +8,23 @@ div {
 } 
 */
 
-.container,
-.container-fluids {
-  /*background-image: linear-gradient(to bottom right, #5f99ed, #9c7dc4);*/
+body {
   background-image: url('./_assets/le-bg.jpg');
+  background-repeat: no-repeat;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up with portrait orientation) */
+@media only screen and (min-width: 300px) and (orientation: portrait) {
+  body {
+    background-size: 100vh 100vh;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-size: cover;
+  }
 }
 
 .form-row-wrapper {
