@@ -115,7 +115,7 @@ class RegisterPage extends React.Component {
                     onChange={this.handleChange}
                   />
                   {submitted && !user.email && (
-                    <div className="warning">email is required</div>
+                    <div className="warning">Email is required</div>
                   )}
                 </div>
                 <div
@@ -151,7 +151,7 @@ class RegisterPage extends React.Component {
                     onChange={this.handleChange}
                   />
                   {submitted && !user.password && (
-                    <div className="warning">Password is required</div>
+                    <div className="warning">Confirm Password is required</div>
                   )}
                 </div>
                 <div className="mt-4 form-group">
@@ -166,7 +166,7 @@ class RegisterPage extends React.Component {
               </form>
             </div>
           </div>
-          <div className="row pt-3 footer-row-wrapper">
+          <div className="row pt-4 footer-row-wrapper">
             <div className="col">
               <p className="copyright">
                 Copyright 2019 Loyalti<span className="light">express</span>

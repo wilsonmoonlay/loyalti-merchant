@@ -71,7 +71,7 @@ class LoginPage extends React.Component {
                     onChange={this.handleChange}
                   />
                   {submitted && !email && (
-                    <div className="warning">email is required</div>
+                    <div className="warning">Email is required</div>
                   )}
                 </div>
                 <div
