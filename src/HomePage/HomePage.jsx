@@ -15,10 +15,16 @@ class HomePage extends React.Component {
 
   render() {
     const { user, users } = this.props
+
+    const firstName = user.fullName
+      .split(' ')
+      .slice(0, -1)
+      .join(' ')
+
     return (
       <div className="col-md-6 col-md-offset-3">
-        <h1>Hi {user.fullName}!</h1>
-        <p>You're logged in with React!!</p>
+        <h1>Hi {firstName}!</h1>
+
         <h3>All registered users:</h3>
         {users.loading && <em>Loading users...</em>}
         {users.error && (
