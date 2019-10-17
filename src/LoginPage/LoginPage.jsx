@@ -42,7 +42,7 @@ class LoginPage extends React.Component {
     const { loggingIn } = this.props
     const { email, password, submitted } = this.state
     return (
-      <div className="row mx-0 align-items-center justify-content-center text-center login-row-wrapper">
+      <div className="row mx-0 align-items-center justify-content-center text-center">
         <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
           <div className="row my-5 logo-row-wrapper">
             <div className="col">
@@ -71,7 +71,7 @@ class LoginPage extends React.Component {
                     onChange={this.handleChange}
                   />
                   {submitted && !email && (
-                    <div className="help-block">email is required</div>
+                    <div className="warning">email is required</div>
                   )}
                 </div>
                 <div
@@ -88,7 +88,7 @@ class LoginPage extends React.Component {
                     onChange={this.handleChange}
                   />
                   {submitted && !password && (
-                    <div className="help-block">Password is required</div>
+                    <div className="warning">Password is required</div>
                   )}
                 </div>
                 <div className="row">
@@ -114,7 +114,9 @@ class LoginPage extends React.Component {
           <div className="row px-0 py-3 register-row-wrapper">
             <div className="col px-0">
               <Link to="/register">
-                <button className="register-button">Create Account</button>
+                <button className="create-account-button">
+                  Create Account
+                </button>
               </Link>
             </div>
           </div>
