@@ -39,7 +39,8 @@ body {
 }
 
 .login-title,
-.register-title {
+.register-title,
+.reset-title {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
@@ -51,12 +52,14 @@ body {
 }
 
 .login-form,
-.register-form {
+.register-form,
+.reset-form {
   margin-top: 4rem;
 }
 
 .login-text,
-.register-text {
+.register-text,
+.reset-text {
   display: block;
   width: 100%;
   height: calc(1.9em + 0.75rem + 2px);
@@ -150,10 +153,47 @@ body {
   font-weight: bold;
 }
 
+.forgot-password-desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5f99ed;
+}
+
 .login-button,
 .register-button {
   display: inline-block;
   width: 143px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 34px;
+  background-color: #5f99ed;
+  vertical-align: middle;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  /* button caption */
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.reset-button {
+  display: inline-block;
+  width: 202px;
   height: 40px;
   border: 1px solid transparent;
   border-radius: 34px;
