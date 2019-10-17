@@ -10,9 +10,9 @@ class RegisterPage extends React.Component {
 
     this.state = {
       user: {
-        firstName: '',
-        lastName: '',
-        username: '',
+        fullName: '',
+        phone: '',
+        email: '',
         password: '',
       },
       submitted: false,
@@ -38,7 +38,7 @@ class RegisterPage extends React.Component {
 
     this.setState({ submitted: true })
     const { user } = this.state
-    if (user.firstName && user.lastName && user.username && user.password) {
+    if (user.fullName && user.phone && user.email && user.password) {
       this.props.register(user)
     }
   }
@@ -52,53 +52,36 @@ class RegisterPage extends React.Component {
         <form name="form" onSubmit={this.handleSubmit}>
           <div
             className={
-              'form-group' + (submitted && !user.firstName ? ' has-error' : '')
+              'form-group' + (submitted && !user.fullName ? ' has-error' : '')
             }
           >
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="fullName">Full Name</label>
             <input
               type="text"
               className="form-control"
-              name="firstName"
-              value={user.firstName}
+              name="fullName"
+              value={user.fullName}
               onChange={this.handleChange}
             />
-            {submitted && !user.firstName && (
-              <div className="help-block">First Name is required</div>
+            {submitted && !user.fullName && (
+              <div className="help-block">Full Name is required</div>
             )}
           </div>
           <div
             className={
-              'form-group' + (submitted && !user.lastName ? ' has-error' : '')
+              'form-group' + (submitted && !user.email ? ' has-error' : '')
             }
           >
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="email">email</label>
             <input
               type="text"
               className="form-control"
-              name="lastName"
-              value={user.lastName}
+              name="email"
+              value={user.email}
               onChange={this.handleChange}
             />
-            {submitted && !user.lastName && (
-              <div className="help-block">Last Name is required</div>
-            )}
-          </div>
-          <div
-            className={
-              'form-group' + (submitted && !user.username ? ' has-error' : '')
-            }
-          >
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              className="form-control"
-              name="username"
-              value={user.username}
-              onChange={this.handleChange}
-            />
-            {submitted && !user.username && (
-              <div className="help-block">Username is required</div>
+            {submitted && !user.email && (
+              <div className="help-block">email is required</div>
             )}
           </div>
           <div
@@ -116,6 +99,23 @@ class RegisterPage extends React.Component {
             />
             {submitted && !user.password && (
               <div className="help-block">Password is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' + (submitted && !user.phone ? ' has-error' : '')
+            }
+          >
+            <label htmlFor="phone">Phone</label>
+            <input
+              type="text"
+              className="form-control"
+              name="phone"
+              value={user.phone}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.phone && (
+              <div className="help-block">Phone is required</div>
             )}
           </div>
           <div className="form-group">

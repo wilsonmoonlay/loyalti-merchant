@@ -17,7 +17,7 @@ class HomePage extends React.Component {
     const { user, users } = this.props
     return (
       <div className="col-md-6 col-md-offset-3">
-        <h1>Hi {user.firstName}!</h1>
+        <h1>Hi {user.fullName}!</h1>
         <p>You're logged in with React!!</p>
         <h3>All registered users:</h3>
         {users.loading && <em>Loading users...</em>}
@@ -28,7 +28,7 @@ class HomePage extends React.Component {
           <ul>
             {users.items.map((user, index) => (
               <li key={user.id}>
-                {user.firstName + ' ' + user.lastName}
+                {user.fullName + ' | ' + user.phone}
                 {user.deleting ? (
                   <em> - Deleting...</em>
                 ) : user.deleteError ? (

@@ -14,7 +14,7 @@ class LoginPage extends React.Component {
     this.props.logout()
 
     this.state = {
-      username: '',
+      email: '',
       password: '',
       submitted: false,
     }
@@ -32,15 +32,15 @@ class LoginPage extends React.Component {
     e.preventDefault()
 
     this.setState({ submitted: true })
-    const { username, password } = this.state
-    if (username && password) {
-      this.props.login(username, password)
+    const { email, password } = this.state
+    if (email && password) {
+      this.props.login(email, password)
     }
   }
 
   render() {
     const { loggingIn } = this.props
-    const { username, password, submitted } = this.state
+    const { email, password, submitted } = this.state
     return (
       <div className="row mx-0 align-items-center justify-content-center text-center login-row-wrapper">
         <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
@@ -59,19 +59,19 @@ class LoginPage extends React.Component {
               >
                 <div
                   className={
-                    'form-group' + (submitted && !username ? ' has-error' : '')
+                    'form-group' + (submitted && !email ? ' has-error' : '')
                   }
                 >
                   <input
                     type="text"
                     className="login-text"
-                    name="username"
+                    name="email"
                     placeholder="Email"
-                    value={username}
+                    value={email}
                     onChange={this.handleChange}
                   />
-                  {submitted && !username && (
-                    <div className="help-block">Username is required</div>
+                  {submitted && !email && (
+                    <div className="help-block">email is required</div>
                   )}
                 </div>
                 <div
