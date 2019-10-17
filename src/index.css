@@ -135,6 +135,21 @@ body {
   color: #5f99ed;
 }
 
+.tos {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5f99ed;
+}
+
+.tos .bold {
+  font-weight: bold;
+}
+
 .login-button,
 .register-button {
   display: inline-block;
