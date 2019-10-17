@@ -98,7 +98,7 @@ class LoginPage extends React.Component {
                     </label>
                   </div>
                   <div className="col-6 text-right forgot-password">
-                    <Link to="/forgot-password">Forgot Password?</Link>
+                    <Link to="/reset">Forgot Password?</Link>
                   </div>
                 </div>
 
