@@ -20,8 +20,10 @@ body {
 }
 
 .logo {
-  width: 301px;
-  height: 63px;
+  width: 100%;
+  height: auto;
+  max-width: 301px;
+  max-height: 63px;
   object-fit: contain;
 }
 
