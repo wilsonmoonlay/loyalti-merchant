@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment, Component } from 'react'
 import { Router, Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -10,7 +10,7 @@ import { LoginPage } from '../LoginPage'
 import { RegisterPage } from '../RegisterPage'
 import { ForgotPasswordPage } from '../ForgotPasswordPage'
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props)
 
@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     const { alert } = this.props
     return (
-      <div className="container-fluids">
+      <Fragment>
         {alert.message && (
           <div className={`alert ${alert.type}`}>{alert.message}</div>
         )}
@@ -36,7 +36,7 @@ class App extends React.Component {
             <Redirect from="*" to="/" />
           </Switch>
         </Router>
-      </div>
+      </Fragment>
     )
   }
 }
