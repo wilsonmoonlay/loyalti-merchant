@@ -50,7 +50,7 @@ class RegisterPage extends React.Component {
     const { user, submitted } = this.state
     return (
       <div className="row mx-0 align-items-center justify-content-center text-center">
-        <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 mx-3">
+        <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 px-4">
           <div className="row my-5 logo-row-wrapper">
             <div className="col">
               <img className="logo" src={logo} />
