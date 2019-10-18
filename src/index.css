@@ -11,20 +11,7 @@ div {
 body {
   background-image: url('./_assets/le-bg.jpg');
   background-repeat: no-repeat;
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up with portrait orientation) */
-@media only screen and (min-width: 300px) and (orientation: portrait) {
-  body {
-    background-size: 100vh 100vh;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    background-size: cover;
-  }
+  background-size: auto;
 }
 
 .form-row-wrapper {
@@ -115,6 +102,18 @@ body {
   font-size: 10px;
   position: absolute;
 }
+
+/*
+.alert {
+  position: absolute !important;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+} 
+*/
 
 .remember-me {
   font-family: 'Nunito Sans', sans-serif;
@@ -256,4 +255,30 @@ body {
 
 .copyright .light {
   font-weight: 200;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .row-container {
+    height: 100vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .row-container {
+    height: 100vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
