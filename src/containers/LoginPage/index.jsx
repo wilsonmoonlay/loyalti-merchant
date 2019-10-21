@@ -103,8 +103,9 @@ class LoginPage extends Component {
                 </div>
 
                 <div className="mt-4 form-group">
-                  <button className="login-button">Log In</button>
-                  {loggingIn && <LoadingIndicator />}
+                  <button className="login-button">
+                    {loggingIn ? <LoadingIndicator /> : 'Log In'}
+                  </button>
                 </div>
               </form>
             </div>
