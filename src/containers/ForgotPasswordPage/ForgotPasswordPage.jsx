@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { userActions } from '../_actions'
+import { userActions } from '../../_actions'
+import { logo } from '../../_assets'
 
-import { logo } from '../_assets'
-
-class ForgotPasswordPage extends React.Component {
+class ForgotPasswordPage extends Component {
   constructor(props) {
     super(props)
 

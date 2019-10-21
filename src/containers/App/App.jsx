@@ -2,13 +2,10 @@ import React, { Fragment, Component } from 'react'
 import { Router, Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { history } from '../_helpers'
-import { alertActions } from '../_actions'
-import { PrivateRoute } from '../_components'
-import { HomePage } from '../HomePage'
-import { LoginPage } from '../LoginPage'
-import { RegisterPage } from '../RegisterPage'
-import { ForgotPasswordPage } from '../ForgotPasswordPage'
+import { history } from '../../_helpers'
+import { alertActions } from '../../_actions'
+import { PrivateRoute } from '../../components'
+import { HomePage, LoginPage, RegisterPage, ForgotPasswordPage } from '..'
 
 class App extends Component {
   constructor(props) {

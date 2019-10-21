@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { userActions } from '../_actions'
+import { userActions } from '../../_actions'
+import { logo } from '../../_assets'
 
-import { logo } from '../_assets'
-
-class RegisterPage extends React.Component {
+class RegisterPage extends Component {
   constructor(props) {
     super(props)
 
