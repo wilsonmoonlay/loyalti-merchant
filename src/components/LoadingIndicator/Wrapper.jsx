@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  margin: 2em auto;
-  width: 40px;
-  height: 40px;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
   position: relative;
-`;
+`
 
-export default Wrapper;
+export default Wrapper
