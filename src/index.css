@@ -6,12 +6,6 @@ html {
   letter-spacing: normal;
 }
 
-body {
-  background-image: url('./_assets/le-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
 input[type='text'],
 input[type='password'] {
   display: block;
@@ -104,15 +98,22 @@ p.large {
   font-size: 16px;
 }
 
-.link {
-  font-size: 14px;
-  font-weight: bold;
-  color: #5f99ed;
+.row-container {
+  height: 100%;
+  background-image: url('./_assets/le-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-container {
   border-radius: 15px;
   background-color: #ffffff;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: bold;
+  color: #5f99ed;
 }
 
 .logo {
@@ -162,16 +163,25 @@ p.large {
   font-weight: 200;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .row-container {
+@media screen and (max-width: 600px) and(orientation:portrait) {
+  .container,
+  .container-fluids {
     height: 100vh;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .row-container {
+/* iPad Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .container,
+  .container-fluids {
+    height: 100vh;
+  }
+}
+
+/* iPhone X Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .container,
+  .container-fluids {
     height: 100vh;
   }
 }
