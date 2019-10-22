@@ -51,19 +51,15 @@ class RegisterPage extends Component {
     return (
       <div className="row mx-0 align-items-center justify-content-center text-center row-container">
         <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 px-4">
-          <div className="row my-5 logo-row-wrapper">
+          <div className="row my-5">
             <div className="col">
               <img className="logo" src={logo} />
             </div>
           </div>
-          <div className="row form-row-wrapper">
+          <div className="row form-container">
             <div className="col px-xs-1 px-sm-2 px-md-3 px-lg-4 px-xl-5">
-              <h3 className="mt-4 register-title">Register</h3>
-              <form
-                className="register-form"
-                name="form"
-                onSubmit={this.handleSubmit}
-              >
+              <h2 className="mt-4 title">Register</h2>
+              <form name="form" onSubmit={this.handleSubmit}>
                 <div
                   className={
                     'form-group' +
@@ -72,7 +68,6 @@ class RegisterPage extends Component {
                 >
                   <input
                     type="text"
-                    className="register-text"
                     name="fullName"
                     placeholder="Full Name"
                     value={user.fullName}
@@ -90,7 +85,6 @@ class RegisterPage extends Component {
                 >
                   <input
                     type="text"
-                    className="register-text"
                     name="phone"
                     placeholder="Phone Number"
                     value={user.phone}
@@ -108,7 +102,6 @@ class RegisterPage extends Component {
                 >
                   <input
                     type="text"
-                    className="register-text"
                     name="email"
                     placeholder="Your Email"
                     value={user.email}
@@ -126,7 +119,6 @@ class RegisterPage extends Component {
                 >
                   <input
                     type="password"
-                    className="register-text"
                     name="password"
                     placeholder="Your Password"
                     value={user.password}
@@ -144,7 +136,6 @@ class RegisterPage extends Component {
                 >
                   <input
                     type="password"
-                    className="register-text"
                     name="confpassword"
                     placeholder="Confirm Password"
                     value={user.password}
@@ -155,12 +146,12 @@ class RegisterPage extends Component {
                   )}
                 </div>
                 <div className="mt-4 form-group">
-                  <p className="my-3 tos">
+                  <p className="my-3 small">
                     By clicking this button, I accept
                     <a className="bold"> Loyaltiexpress T&amp;C</a>
                   </p>
 
-                  <button className="mb-4 register-button">
+                  <button className="mb-4 small register">
                     {registering ? <LoadingIndicator /> : 'Register'}
                   </button>
                   <Link to="/login" className="mb-4 btn btn-link">
@@ -170,7 +161,7 @@ class RegisterPage extends Component {
               </form>
             </div>
           </div>
-          <div className="row pt-4 footer-row-wrapper">
+          <div className="row pt-4">
             <div className="col">
               <p className="copyright">
                 Copyright 2019 Loyalti<span className="light">express</span>

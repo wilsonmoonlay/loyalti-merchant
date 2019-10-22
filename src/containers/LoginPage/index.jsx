@@ -44,19 +44,15 @@ class LoginPage extends Component {
     return (
       <div className="row mx-0 align-items-center justify-content-center text-center row-container">
         <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 px-4">
-          <div className="row my-5 logo-row-wrapper">
+          <div className="row my-5">
             <div className="col">
               <img className="logo" src={logo} />
             </div>
           </div>
-          <div className="row form-row-wrapper">
+          <div className="row form-container">
             <div className="col px-xs-1 px-sm-2 px-md-3 px-lg-4 px-xl-5">
-              <h3 className="mt-4 login-title">Log In</h3>
-              <form
-                className="login-form"
-                name="form"
-                onSubmit={this.handleSubmit}
-              >
+              <h2 className="mt-4 title">Log In</h2>
+              <form name="form" onSubmit={this.handleSubmit}>
                 <div
                   className={
                     'form-group' + (submitted && !email ? ' has-error' : '')
@@ -64,7 +60,6 @@ class LoginPage extends Component {
                 >
                   <input
                     type="text"
-                    className="login-text"
                     name="email"
                     placeholder="Email"
                     value={email}
@@ -81,7 +76,6 @@ class LoginPage extends Component {
                 >
                   <input
                     type="password"
-                    className="login-text"
                     name="password"
                     placeholder="Password"
                     value={password}
@@ -92,34 +86,32 @@ class LoginPage extends Component {
                   )}
                 </div>
                 <div className="row">
-                  <div className="col-6 text-left remember-me">
+                  <div className="col-6 text-left">
                     <label>
                       <input type="checkbox" /> Remember Me
                     </label>
                   </div>
-                  <div className="col-6 text-right forgot-password">
+                  <div className="col-6 text-right link">
                     <Link to="/reset">Forgot Password?</Link>
                   </div>
                 </div>
 
                 <div className="mt-4 form-group">
-                  <button className="login-button">
+                  <button className="small login">
                     {loggingIn ? <LoadingIndicator /> : 'Log In'}
                   </button>
                 </div>
               </form>
             </div>
           </div>
-          <div className="row px-0 py-3 register-row-wrapper">
+          <div className="row px-0 py-3">
             <div className="col px-0">
               <Link to="/register">
-                <button className="create-account-button">
-                  Create Account
-                </button>
+                <button className="large">Create Account</button>
               </Link>
             </div>
           </div>
-          <div className="row pt-3 footer-row-wrapper">
+          <div className="row pt-3">
             <div className="col">
               <p className="copyright">
                 Copyright 2019 Loyalti<span className="light">express</span>
