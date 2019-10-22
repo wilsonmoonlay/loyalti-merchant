@@ -5,7 +5,13 @@ import { connect } from 'react-redux'
 import { history } from '../../_helpers'
 import { alertActions } from '../../_actions'
 import { PrivateRoute } from '../../components'
-import { HomePage, LoginPage, RegisterPage, ForgotPasswordPage } from '..'
+import {
+  RegisterPage,
+  LoginPage,
+  HomePage,
+  ForgotPasswordPage,
+  CheckEmailPage,
+} from '..'
 
 class App extends Component {
   constructor(props) {
@@ -27,9 +33,10 @@ class App extends Component {
         <Router history={history}>
           <Switch>
             <PrivateRoute exact path="/" component={HomePage} />
-            <Route path="/login" component={LoginPage} />
             <Route path="/register" component={RegisterPage} />
+            <Route path="/login" component={LoginPage} />
             <Route path="/reset" component={ForgotPasswordPage} />
+            <Route path="/checkemail" component={CheckEmailPage} />
             <Redirect from="*" to="/" />
           </Switch>
         </Router>

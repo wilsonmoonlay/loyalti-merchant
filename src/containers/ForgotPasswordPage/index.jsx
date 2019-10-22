@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { userActions } from '../../_actions'
@@ -41,7 +42,7 @@ class ForgotPasswordPage extends Component {
     const { loggingIn } = this.props
     const { email, password, submitted } = this.state
     return (
-      <div className="row mx-0 align-items-center justify-content-center text-center">
+      <div className="row mx-0 align-items-center justify-content-center text-center row-container">
         <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 px-4">
           <div className="row my-5 logo-row-wrapper">
             <div className="col">
@@ -83,6 +84,9 @@ class ForgotPasswordPage extends Component {
                   <button className="mb-4 reset-button">
                     {loggingIn ? <LoadingIndicator /> : 'Reset Password'}
                   </button>
+                  <Link to="/login" className="mb-4 btn btn-link">
+                    Cancel
+                  </Link>
                 </div>
               </form>
             </div>
