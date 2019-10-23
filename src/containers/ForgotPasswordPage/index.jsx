@@ -42,7 +42,7 @@ class ForgotPasswordPage extends Component {
     const { loggingIn } = this.props
     const { email, password, submitted } = this.state
     return (
-      <div className="container-fluids">
+      <div className="container-fluid">
         <div className="row mx-0 align-items-center justify-content-center text-center row-container">
           <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 px-4">
             <div className="row my-5">
