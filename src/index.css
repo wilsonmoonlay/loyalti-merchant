@@ -112,13 +112,6 @@ p.large {
   padding: 0.5rem !important;
 }
 
-.row-container {
-  height: 100%;
-  background-image: url('./_assets/le-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .form-container {
   border-radius: 15px;
   background-color: #ffffff;
@@ -175,6 +168,14 @@ p.large {
 
 .copyright .light {
   font-weight: 200;
+}
+
+.container,
+.container-fluid {
+  background-image: url('./_assets/le-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 600px) and(orientation:portrait) {
