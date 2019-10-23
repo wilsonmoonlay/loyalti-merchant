@@ -1,8 +1,10 @@
+// @ts-nocheck
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { userActions } from '../../_actions'
+import { logo, burger, mail, line, oval, arrow } from '../../_assets'
 
 class HomePage extends Component {
   componentDidMount() {
@@ -22,39 +24,28 @@ class HomePage extends Component {
       .join(' ')
 
     return (
-      <div className="col-md-6 col-md-offset-3">
-        <h1>Hi {firstName}!</h1>
-
-        <h3>All registered users:</h3>
-        {users.loading && <em>Loading users...</em>}
-        {users.error && (
-          <span className="text-danger">ERROR: {users.error}</span>
-        )}
-        {users.items && (
-          <ul>
-            {users.items.map((user, index) => (
-              <li key={user.id}>
-                {user.fullName + ' | ' + user.phone}
-                {user.deleting ? (
-                  <em> - Deleting...</em>
-                ) : user.deleteError ? (
-                  <span className="text-danger">
-                    {' '}
-                    - ERROR: {user.deleteError}
-                  </span>
-                ) : (
-                  <span>
-                    {' '}
-                    - <a onClick={this.handleDeleteUser(user.id)}>Delete</a>
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
-        <p>
-          <Link to="/login">Logout</Link>
-        </p>
+      <div className="container-fluid sm-background">
+        <div className="row p-4 justify-content-center">
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <img className="mr-3 logo small" src={logo} />
+            <img className="burger" src={burger} />
+          </div>
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-right">
+            <img className="mr-3 mail" src={mail} />
+            <img className="mr-3 line" src={line} />
+            <img className="mr-3 oval" src={oval} />
+            <span className="mr-3 user">{firstName}</span>
+            <img className="arrow" src={arrow} />
+          </div>
+        </div>
+        <div className="row p-4">
+          <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            Sidebar will be here
+          </div>
+          <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+            Charts and other content data will be here
+          </div>
+        </div>
       </div>
     )
   }
