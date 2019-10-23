@@ -98,6 +98,53 @@ p.large {
   font-size: 16px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+img.logo {
+  max-width: 301px;
+  max-height: 63px;
+}
+
+img.small {
+  max-width: 169px !important;
+  max-height: 35px !important;
+}
+
+img.burger {
+  max-width: 22px;
+  max-height: 14px;
+}
+
+img.mail {
+  max-width: 24px;
+  max-height: 19px;
+}
+
+img.line {
+  max-width: 3px;
+  max-height: 45px;
+}
+
+img.oval {
+  max-width: 45px;
+  max-height: 45px;
+}
+
+img.arrow {
+  max-width: 8px;
+  max-height: 13px;
+}
+
+span.user {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
 .alert {
   position: absolute !important;
   left: 0;
@@ -121,14 +168,6 @@ p.large {
   font-size: 14px;
   font-weight: bold;
   color: #5f99ed;
-}
-
-.logo {
-  width: 100%;
-  height: auto;
-  max-width: 301px;
-  max-height: 63px;
-  object-fit: contain;
 }
 
 ::placeholder {
@@ -195,6 +234,10 @@ p.large {
   .container-fluid {
     height: 100vh;
   }
+
+  img.small {
+    display: none !important;
+  }
 }
 
 /* iPad Portrait and Landscape */
@@ -211,4 +254,8 @@ p.large {
   .container-fluid {
     height: 100vh;
   }
+}
+
+div {
+  border: 1px solid black;
 }
