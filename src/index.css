@@ -170,11 +170,23 @@ p.large {
   font-weight: 200;
 }
 
-.container,
-.container-fluid {
+.lg-background {
   background-image: url('./_assets/le-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.sm-background {
+  background-image: url('./_assets/le-bg-sm.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  /* temp height */
+  height: 100vh;
+}
+
+.container,
+.container-fluid {
   padding: 0 !important;
 }
 
