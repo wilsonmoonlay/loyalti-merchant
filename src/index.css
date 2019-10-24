@@ -210,13 +210,13 @@ span.user {
 }
 
 .lg-background {
-  background-image: url('./_assets/le-bg.jpg');
+  background-image: url('./_assets/img/le-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .sm-background {
-  background-image: url('./_assets/le-bg-sm.jpg');
+  background-image: url('./_assets/img/le-bg-sm.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 
