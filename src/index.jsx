@@ -6,9 +6,14 @@ import { Provider } from 'react-redux'
 import { store } from './_helpers'
 import { App } from './containers'
 
-// global style and ready-to-use CSS
-import './index.css'
+// theme, custom and ready-to-use bootstrap css
+import './_assets/css/theme.css'
+import './_assets/css/custom.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+// third party fonts
+import './_assets/vendor/nucleo/css/nucleo.css'
+import './_assets/vendor/fortawesome/fontawesome-free/css/all.min.css'
 
 // setup fake backend
 import { configureFakeBackend } from './_helpers'
