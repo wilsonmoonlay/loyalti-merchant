@@ -1,7 +1,7 @@
-import AdminNavbar from './AdminNavbar/index'
-import AdminFooter from './AdminFooter/index'
 import Sidebar from './Sidebar/index'
+import AdminNavbar from './Navbars/AdminNavbar'
+import AdminFooter from './Footers/AdminFooter'
 
-export { AdminNavbar, AdminFooter, Sidebar }
+export { Sidebar, AdminNavbar, AdminFooter }
 export * from './PrivateRoute/index'
 export * from './LoadingIndicator/index'
