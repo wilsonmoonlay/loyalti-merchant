@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 import React, { Component, Fragment } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -62,15 +63,12 @@ class HomePage extends Component {
             imgAlt: '...',
           }}
         />
-        <div className="main-content" ref="mainContent">
+        <div className="main-content sm-background" ref="mainContent">
           <AdminNavbar
             {...this.props}
             brandText={this.getBrandText(this.props.location.pathname)}
           />
           <Switch>{this.getRoutes(routes)}</Switch>
-          <Container fluid>
-            <AdminFooter />
-          </Container>
         </div>
       </Fragment>
     )
