@@ -225,8 +225,14 @@ span.user {
 }
 
 .navbar-vertical {
-  /*left: 5 !important;
-  position: relative !important; */
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+}
+.navbar-vertical {
+  left: 25px !important;
+  top: 15px !important;
 }
 
 .container,
@@ -237,7 +243,7 @@ span.user {
 @media screen and (max-width: 600px) and(orientation:portrait) {
   .container,
   .container-fluid {
-    height: 100vh;
+    /*height: 100vh;*/
   }
 
   img.small {
@@ -249,7 +255,7 @@ span.user {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .container,
   .container-fluid {
-    height: 100vh;
+    /*height: 100vh;*/
   }
 }
 
@@ -257,6 +263,6 @@ span.user {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .container,
   .container-fluid {
-    height: 100vh;
+    /*height: 100vh;*/
   }
 }
