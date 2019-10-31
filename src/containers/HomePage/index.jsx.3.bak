@@ -54,7 +54,7 @@ class HomePage extends Component {
 
     return (
       <Fragment>
-        <div className="sm-background">
+        <div className="container-fluid sm-background">
           <Sidebar
             {...this.props}
             routes={routes}
